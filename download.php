@@ -19,9 +19,9 @@ for ($i = 0; $i < $optionTags->length; $i++ ) {
 
 echo $total_pages . ' found.' . PHP_EOL . PHP_EOL;
 
-for ($i = 1; $i <= $total_pages; $i++) {
-    echo 'Processing page ' . $i . ' of ' . $total_pages . PHP_EOL . PHP_EOL;
-    $html = file_get_contents('https://www.amigaremix.com/remixes/' . $i);
+for ($pg = 1; $pg <= $total_pages; $pg++) {
+    echo 'Processing page ' . $pg . ' of ' . $total_pages . PHP_EOL . PHP_EOL;
+    $html = file_get_contents('https://www.amigaremix.com/remixes/' . $pg);
 
     $dom = new DOMDocument();
     @$dom->loadHTML($html);
